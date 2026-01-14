@@ -220,7 +220,7 @@ const Index = () => {
           ref={(el) => (sectionRefs.current[0] = el)}
           className="h-screen w-full snap-start"
         >
-          <HeroSection />
+          <HeroSection scrollToContact={() => scrollToSection(5)} />
         </section>
 
         {/* Skills Section */}

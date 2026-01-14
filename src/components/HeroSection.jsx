@@ -5,15 +5,10 @@ import LiquidEther from "./ui/LiquidEther";
 import GradientText from "./ui/GradientText";
 import TextType from "./ui/TextType";
 
-function HeroSection() {
+function HeroSection({ scrollToContact }) {
   const scrollToProjects = () => {
     const nextSection = document.querySelector(".snap-start:nth-child(2)");
     if (nextSection) nextSection.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToContact = () => {
-    const contactSection = document.querySelector(".snap-start:nth-child(6)");
-    if (contactSection) contactSection.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
