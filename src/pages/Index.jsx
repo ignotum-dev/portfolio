@@ -170,7 +170,7 @@ const Index = () => {
         }}
         transition={{ duration: 0.3 }}
         onClick={scrollToTop}
-        className="fixed bottom-4 left-4 md:bottom-6 md:left-auto md:right-[220px] z-40 p-3 md:p-4 rounded-full bg-[#5227FF] hover:bg-[#7b4dff] text-white shadow-lg hover:shadow-[0_0_24px_rgba(82,39,255,0.6)] transition-all duration-300 pointer-events-auto cursor-pointer"
+        className="fixed bottom-4 left-4 md:bottom-8 md:left-auto md:right-8 z-40 p-3 md:p-4 rounded-full bg-[#5227FF] hover:bg-[#7b4dff] text-white shadow-lg hover:shadow-[0_0_24px_rgba(82,39,255,0.6)] transition-all duration-300 pointer-events-auto cursor-pointer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         disabled={!showScrollToTop}

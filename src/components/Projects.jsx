@@ -185,18 +185,18 @@ export default function Projects() {
       </div>
 
       {/* Mobile - Slideable Cards */}
-      <div className="md:hidden w-full px-4 py-12">
+      <div className="md:hidden w-full px-4 py-8">
         {/* Header Section */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl font-bold text-white my-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-white my-4 tracking-tight">
               <span className="text-[#5227FF]">Projects</span>
             </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed px-2">
               A collection of projects I've built.
             </p>
           </motion.div>

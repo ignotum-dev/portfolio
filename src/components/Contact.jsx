@@ -38,15 +38,15 @@ export default function Contact() {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-6 py-16 mt-32 md:mt-0">
-      <div className="mb-12 flex flex-col gap-4 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-slate-400">
+    <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-16">
+      <div className="mb-8 md:mb-12 flex flex-col gap-3 md:gap-4 text-center">
+        <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-slate-400">
           Get In Touch
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
           Let's Connect
         </h2>
-        <p className="text-slate-300 max-w-2xl mx-auto">
+        <p className="text-sm md:text-base text-slate-300 max-w-2xl mx-auto px-2">
           Feel free to reach out through any of my social profiles. I'm always
           interested in connecting with fellow developers and exploring new opportunities.
         </p>

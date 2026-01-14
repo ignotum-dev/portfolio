@@ -105,18 +105,18 @@ const Skills = () => {
     }
   };
   return (
-    <div className="max-w-7xl w-full px-6 py-12 md:py-32 pointer-events-auto">
+    <div className="max-w-7xl w-full px-4 md:px-6 py-8 md:py-32 pointer-events-auto">
       {/* Header Section */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-6 md:mb-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-white my-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white my-4 md:my-6 tracking-tight">
             Tech <span className="text-[#5227FF]">Stack</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-slate-400 text-sm md:text-base lg:text-lg max-w-2xl mx-auto font-light leading-relaxed px-2">
             A curated selection of technologies I use to solve complex problems and build scalable solutions.
           </p>
         </motion.div>
