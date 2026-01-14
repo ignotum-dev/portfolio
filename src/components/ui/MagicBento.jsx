@@ -1,6 +1,14 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import chimsImg from "@/assets/chims.jpeg";
+import smartEdImg from "@/assets/ictdu2.jpg";
+import smsImg from "@/assets/sms.jpeg";
+import receiptsImg from "@/assets/portfolio.jpeg";
+import gamotifyImg from "@/assets/gamotify.jpeg";
+import blockchainImg from "@/assets/Blockchain.png";
+import eventsImg from "@/assets/tictactoe.jpeg";
+import smApiImg from "@/assets/sm-api.jpeg";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -15,21 +23,21 @@ const cardData = [
     label: "Backend",
     path: "google.com",
     tech: ["PHP", "Laravel", "MySQL", "REST API"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+    image: chimsImg,
   },
 
   {
     color: "#060010",
     title: "SMART Ed",
-    description: "A web-based application for DEPED Mabalacat Division Office that collects and manages school data, including student counts, school reports, and statistics, while providing a public interface to promote transparency.",
+    description: "Web-based application for DEPED Mabalacat Division Office that collects and manages school data and provides public transparency.",
     label: "Backend",
     path: "/project-2",
     tech: ["PHP", "Laravel", "MySQL", "REST API"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    image: smartEdImg,
   },
   {
     color: "#060010",
-    title: "Student Attendance System",
+    title: "Student Attendance API",
     description: "Served as the backend developer responsible for API development, data handling, and system logic for a QR code–based attendance system used during school events.",
     label: "Backend",
     path: "/project-3",
@@ -52,7 +60,7 @@ const cardData = [
     label: "Full-Stack",
     path: "/project-5",
     tech: ["React", "Laravel", "PHP", "MySQL","Mantine"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image: gamotifyImg,
   },
   {
     color: "#060010",

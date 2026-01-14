@@ -105,15 +105,15 @@ const Skills = () => {
     }
   };
   return (
-    <div className="max-w-7xl w-full px-6 py-24 md:py-32 pointer-events-auto mt-8 md:mt-0">
+    <div className="max-w-7xl w-full px-6 py-12 md:py-32 pointer-events-auto">
       {/* Header Section */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-white my-6 tracking-tight md:mt-0 md:pt-0">
+          <h2 className="text-5xl md:text-7xl font-bold text-white my-6 tracking-tight">
             Tech <span className="text-[#5227FF]">Stack</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light leading-relaxed">
@@ -160,7 +160,7 @@ const Skills = () => {
 
       {/* Mobile Slideshow */}
       <div className="md:hidden">
-        <div className="relative w-full overflow-hidden px-4">
+        <div className="relative w-full overflow-hidden">
           {/* Slide Container */}
           <div 
             className="flex-1 overflow-hidden select-none"
@@ -173,7 +173,7 @@ const Skills = () => {
               className="flex"
             >
               {TECH_STACK.map((group, idx) => (
-                <div key={group.category} className="min-w-full px-1">
+                <div key={group.category} className="min-w-full px-2">
                   <motion.div 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
