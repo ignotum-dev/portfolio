@@ -79,7 +79,7 @@ function HeroSection() {
 
           <div className="flex flex-wrap gap-4 justify-center pointer-events-auto">
             <a
-              href="/Gerald_Ivan_Flores_Resume.pdf"
+              href="https://drive.google.com/file/d/1rycRhkRMRWercBhZC8AWGAjXQBlQvFiY/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl bg-white text-black font-bold hover:bg-slate-200 transition-colors"
