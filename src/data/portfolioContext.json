@@ -1,0 +1,109 @@
+ {
+  "personalInfo": {
+    "name": "Gerald Ivan Flores",
+    "email": "flores.geraldivan@gmail.com",
+    "role": "Junior Full-Stack Developer | Web Developer",
+    "github": "https://github.com/ignotum-dev",
+    "linkedin": "https://www.linkedin.com/in/floresgeraldivan/",
+    "facebook": "https://www.facebook.com/flores.geraldivan/"
+  },
+  "skills": {
+    "frontend": {
+      "languages": ["HTML5", "CSS3", "JavaScript"],
+      "frameworks": ["React", "Vite", "React Native"],
+      "styling": ["Tailwind CSS", "Mantine UI", "React Bits"],
+      "tools": ["Prettier", "VSCode", "Git/GitHub", "Tampermonkey"]
+    },
+    "backend": {
+      "languages": ["Node.js", "Python", "Java", "PHP"],
+      "frameworks": ["Laravel", "REST APIs"],
+      "databases": ["MySQL", "Database Design & Optimization"],
+      "blockchain": ["Solidity", "Base L2 Development"],
+      "apis": ["RESTful API Design & Development"]
+    },
+    "additional": {
+      "platforms": ["WordPress"],
+      "versionControl": ["Git", "GitHub"],
+      "devTools": ["VSCode", "Eclipse", "Remix IDE"],
+      "practices": ["Full-stack development", "responsive web design", "blockchain integration"]
+    }
+  },
+  "certifications": [
+    {
+      "name": "AI Hackathon 2025 - 1st Runner Up",
+      "provider": "Cloudstaff",
+      "year": 2025
+    },
+    {
+      "name": "11th TOPCIT Philippines - Top 4 Philippines",
+      "provider": "TOPCIT",
+      "year": 2024
+    },
+    {
+      "name": "Information Technology Specialist: Databases",
+      "provider": "CERTIPORT",
+      "year": 2023
+    },
+    {
+      "name": "Information Technology Specialist: Java",
+      "provider": "CERTIPORT",
+      "year": 2023
+    }
+  ],
+  "experience": [
+    "Full-Stack Development: Building complete web applications from frontend to backend",
+    "Web Design: Creating modern, responsive user interfaces",
+    "Blockchain Development: Smart contract development with Solidity on Layer 2 solutions",
+    "Advanced UI Components: Creating interactive and animated user experiences",
+    "REST API Development: Designing and implementing scalable APIs",
+    "Database Design: MySQL database architecture and optimization"
+  ],
+  "projects": [
+    "CHIMS: Healthcare management system for LGU Mabalacat",
+    "SMART Ed: Web-based application for DEPED Mabalacat Division Office",
+    "Student Attendance System: QR code-based attendance system",
+    "SPCF Receipt Generator: Web scraping and automation solution",
+    "Gamotify: Medicine inventory and sales management system",
+    "Alkansave: Web3 mobile application with DeFi features",
+    "Event Management System: System for planning and tracking events",
+    "Student Management System API: CRUD operations for school records"
+  ],
+  "portfolioSections": [
+    {
+      "name": "Hero Section",
+      "description": "Introduction and quick overview"
+    },
+    {
+      "name": "Skills",
+      "description": "Detailed breakdown of technical abilities"
+    },
+    {
+      "name": "Projects",
+      "description": "Featured work and implementations"
+    },
+    {
+      "name": "Timeline",
+      "description": "Professional journey and milestones"
+    },
+    {
+      "name": "Gallery",
+      "description": "Certificates and achievements"
+    },
+    {
+      "name": "Contact",
+      "description": "Ways to reach out"
+    }
+  ],
+  "responseGuidelines": [
+    "Be warm, professional, and encouraging",
+    "Reference specific skills from the list when relevant",
+    "Direct users to portfolio sections for detailed visual examples",
+    "When asked about projects, highlight the variety and technical depth",
+    "For contact inquiries, emphasize the email contact method",
+    "Be enthusiastic about blockchain and full-stack development topics",
+    "Keep responses concise but informative (2-3 sentences typically)",
+    "If asked about something not mentioned, suggest checking the portfolio or contacting directly",
+    "Answer about skills with confidence, showing expertise in the listed technologies",
+    "When discussing experience, emphasize both breadth (many technologies) and depth (expertise level)"
+  ]
+}
