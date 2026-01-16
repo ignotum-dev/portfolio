@@ -161,25 +161,28 @@ const Index = () => {
         staggerDelay={0.12}
       />
 
-      {/* Scroll to Top Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{
-          opacity: showScrollToTop ? 1 : 0,
-          scale: showScrollToTop ? 1 : 0,
-        }}
-        transition={{ duration: 0.3 }}
-        onClick={scrollToTop}
-        className="fixed bottom-4 left-4 md:bottom-8 md:left-auto md:right-8 z-40 p-3 md:p-4 rounded-full bg-[#5227FF] hover:bg-[#7b4dff] text-white shadow-lg hover:shadow-[0_0_24px_rgba(82,39,255,0.6)] transition-all duration-300 pointer-events-auto cursor-pointer"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        disabled={!showScrollToTop}
-      >
-        <ArrowUp size={24} />
-      </motion.button>
+      {/* Scroll Controls Container */}
+      <div className="fixed bottom-4 left-4 md:bottom-6 md:left-10 z-40 flex flex-row items-center gap-4">
+        {/* ChatBot Component */}
+        <ChatBot />
 
-      {/* ChatBot Component */}
-      <ChatBot />
+        {/* Scroll to Top Button */}
+        <motion.button
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{
+            opacity: showScrollToTop ? 1 : 0,
+            scale: showScrollToTop ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+          onClick={scrollToTop}
+          className="p-3 md:p-4 rounded-full bg-[#5227FF] hover:bg-[#7b4dff] text-white shadow-lg hover:shadow-[0_0_24px_rgba(82,39,255,0.6)] transition-all duration-300 pointer-events-auto cursor-pointer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          disabled={!showScrollToTop}
+        >
+          <ArrowUp size={24} />
+        </motion.button>
+      </div>
 
       {/* Side Stepper Line */}
       <div className="hidden md:fixed md:left-6 md:left-12 md:top-1/2 md:-translate-y-1/2 md:z-50 md:flex md:flex-col md:gap-6 md:items-center">

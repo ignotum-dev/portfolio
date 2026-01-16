@@ -198,7 +198,7 @@ HOW TO RESPOND (AS GERALD):
         aria-label="Chat with Gerald"
       >
         <MessageCircle size={24} />
-        <span className="hidden md:inline font-medium text-sm">Chat with Gerald</span>
+        <span className="hidden md:inline font-medium text-md">Chat with Gerald</span>
       </motion.button>
 
       {/* Chat Window */}

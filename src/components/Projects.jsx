@@ -179,7 +179,7 @@ export default function Projects() {
     <>
       {/* Desktop - MagicBento Grid */}
       <div className="hidden md:flex w-full justify-center items-center px-2 md:px-4">
-        <div className="w-full md:w-[95%] lg:w-[85%] transform scale-90 md:scale-75">
+        <div className="w-full md:w-[95%] lg:w-[85%] transform scale-90 md:scale-90">
           <MagicBento spotlightRadius={300}/>
         </div>
       </div>

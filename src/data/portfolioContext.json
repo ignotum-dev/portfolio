@@ -12,7 +12,7 @@
       "languages": ["HTML5", "CSS3", "JavaScript"],
       "frameworks": ["React", "Vite", "React Native"],
       "styling": ["Tailwind CSS", "Mantine UI", "React Bits"],
-      "tools": ["Prettier", "VSCode", "Git/GitHub", "Tampermonkey"]
+      "tools": ["Prettier", "VSCode", "Git/GitHub", "Greasemonkey"]
     },
     "backend": {
       "languages": ["Node.js", "Python", "Java", "PHP"],

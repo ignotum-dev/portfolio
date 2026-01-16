@@ -2,13 +2,21 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import chimsImg from "@/assets/chims.jpeg";
-import smartEdImg from "@/assets/ictdu2.jpg";
+import smartEdImg from "@/assets/smart-ed.png";
 import smsImg from "@/assets/sms.jpeg";
 import receiptsImg from "@/assets/portfolio.jpeg";
 import gamotifyImg from "@/assets/gamotify.jpeg";
 import blockchainImg from "@/assets/Blockchain.png";
-import eventsImg from "@/assets/tictactoe.jpeg";
-import smApiImg from "@/assets/sm-api.jpeg";
+import ems from "@/assets/ems.png";
+import smApi from "@/assets/sm-api.png";
+import attendance from "@/assets/attendance.png";
+import receipt from "@/assets/receipt.png";
+import alkansave from "@/assets/alkansave.jpg";
+import student from "@/assets/student.png";
+import calculator from "@/assets/calculator.png";
+import login from "@/assets/login.png";
+import temperature from "@/assets/temperature.png";
+import tictactoe from "@/assets/tictactoe.png";
 
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
@@ -42,16 +50,16 @@ const cardData = [
     label: "Backend",
     path: "/project-3",
     tech: ["PHP", "Laravel", "MySQL", "REST API"],
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+    image: attendance,
   },
   {
     color: "#060010",
     title: "SPCF Receipt Generator",
-    description: "A web scraping and automation solution developed using Tampermonkey on Firefox 34, created in [2014], used by the school to extract transaction data and generate printable receipts aligned with BIR compliance requirements.",
+    description: "A web scraping and automation solution developed using Greasemonkey on Firefox 34, created in [2014], used by the school to extract transaction data and generate printable receipts aligned with BIR compliance requirements.",
     label: "Scripting",
     path: "/project-4",
-    tech: ["Javascript", "CSS", "Tampermonkey"],
-    image: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&h=600&fit=crop",
+    tech: ["Javascript", "CSS", "Greasemonkey"],
+    image: receipt,
   },
   {
     color: "#060010",
@@ -69,7 +77,7 @@ const cardData = [
     label: "Backend",
     path: "/project-6",
     tech: ["Solidity", "Base L2", "Remix"],
-    image: "https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=800&h=600&fit=crop",
+    image: alkansave,
   },
   {
     color: "#060010",
@@ -78,7 +86,7 @@ const cardData = [
     label: "Full-Stack",
     path: "/project-7",
     tech: ["React", "Laravel", "PHP", "MySQL","Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+    image: ems,
   },
   {
     color: "#060010",
@@ -87,7 +95,52 @@ const cardData = [
     label: "Backend",
     path: "/project-8",
     tech: ["PHP", "Laravel", "MySQL", "REST API"],
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=600&fit=crop",
+    image: smApi,
+  },
+  {
+    color: "#060010",
+    title: "Student Record System",
+    description: "A C application that manages student records, allowing users to add, view, update, and delete student information through a command-line interface.",
+    label: "CLI Application",
+    path: "/project-8",
+    tech: ["C"],
+    image: student,
+  },
+  {
+    color: "#060010",
+    title: "Calculator",
+    description: "A Java Application that performs basic arithmetic operations such as addition, subtraction, multiplication, and division through a graphical user interface.",
+    label: "GUI Application",
+    path: "/project-8",
+    tech: ["Java", "Swing", "Windows Builder"],
+    image: calculator,
+  },
+  {
+    color: "#060010",
+    title: "SPCF Login",
+    description: "A simple java application that simulates a login system with sign-in and signup functionality with text file data storage.",
+    label: "GUI Application",
+    path: "/project-8",
+    tech: ["Java", "Swing", "File Handling"],
+    image: login,
+  },
+  {
+    color: "#060010",
+    title: "Temperature Converter",
+    description: "A simple java application that converts temperature values between Celsius, Fahrenheit, and Kelvin using a graphical user interface.",
+    label: "GUI Application",
+    path: "/project-8",
+    tech: ["Java", "Swing", "Windows Builder"],
+    image: temperature,
+  },
+  {
+    color: "#060010",
+    title: "TicTacToe",
+    description: "A java application that allows two players to play the classic TicTacToe game against each other or just play with AI using a graphical user interface.",
+    label: "GUI Application",
+    path: "/project-8",
+    tech: ["Java", "Swing", "Windows Builder"],
+    image: tictactoe,
   },
 ];
 
@@ -575,7 +628,7 @@ const MagicBento = ({
     if (carouselRef.current) {
       const scrollAmount = 300;
       carouselRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        top: direction === 'up' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       });
     }
@@ -585,14 +638,14 @@ const MagicBento = ({
   const handleMouseDown = (e) => {
     if (!carouselRef.current) return;
     const carousel = carouselRef.current;
-    const startX = e.pageX - carousel.offsetLeft;
-    const scrollLeft = carousel.scrollLeft;
+    const startY = e.pageY - carousel.offsetTop;
+    const scrollTop = carousel.scrollTop;
     carousel.style.cursor = 'grabbing';
 
     const handleMouseMove = (moveEvent) => {
-      const x = moveEvent.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.2;
-      carousel.scrollLeft = scrollLeft - walk;
+      const y = moveEvent.pageY - carousel.offsetTop;
+      const walk = (y - startY) * 1.2;
+      carousel.scrollTop = scrollTop - walk;
     };
 
     const handleMouseUp = () => {
@@ -631,10 +684,10 @@ const MagicBento = ({
             padding: 0 1rem;
             scrollbar-width: none;
             -ms-overflow-style: none;
-            overflow-y: hidden;
-            overflow-x: auto;
-            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            overflow-y: auto;
+            overflow-x: hidden;
+            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
           }
           
           .carousel-container::-webkit-scrollbar {
@@ -716,7 +769,7 @@ const MagicBento = ({
             background: rgba(132, 0, 255, 0.15);
             border: 1px solid rgba(132, 0, 255, 0.3);
             border-radius: 9999px;
-            font-size: 0.75rem;
+            font-size: 1.15rem;
             color: rgba(132, 0, 255, 0.9);
             font-weight: 500;
             transition: all 0.3s ease;
@@ -816,91 +869,93 @@ const MagicBento = ({
           </p>
         </div>
 
-        {/* Featured Card - Large at Top */}
-        <div className="featured-card mb-8">
-          <ParticleCard
-            className={`card card-with-bg flex flex-col justify-between relative w-full h-auto min-h-[380px] p-6 rounded-[24px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.25)] ${
-              enableBorderGlow ? "card--border-glow" : ""
-            }`}
-            style={{
-              backgroundColor: featuredCard.color || "var(--background-dark)",
-              backgroundImage: featuredCard.image ? `url(${featuredCard.image})` : 'none',
-              borderColor: "var(--border-color)",
-              color: "var(--white)",
-              "--glow-x": "50%",
-              "--glow-y": "50%",
-              "--glow-intensity": "0",
-              "--glow-radius": "200px",
-            }}
-            disableAnimations={shouldDisableAnimations}
-            particleCount={particleCount}
-            glowColor={glowColor}
-            enableTilt={enableTilt}
-            clickEffect={clickEffect}
-            enableMagnetism={enableMagnetism}
-          >
-            <div className="card__header flex justify-between items-start gap-3 relative text-white">
-              <span className="card__label text-lg font-medium">{featuredCard.label}</span>
-              <Link
-                to={featuredCard.path || "/"}
-                className="p-2 bg-white/10 hover:bg-white/20 rounded-lg border border-white/20 transition-all duration-200"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path>
-                </svg>
-              </Link>
-            </div>
-            <div className="card__content flex flex-col relative text-white mt-auto">
-              <h2 className="card__title font-semibold text-3xl m-0 mb-2">
-                {featuredCard.title}
-              </h2>
-              <p className="card__description text-base leading-6 opacity-90 mb-4">
-                {featuredCard.description}
-              </p>
-              {featuredCard.tech && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {featuredCard.tech.map((tech, idx) => (
-                    <span key={idx} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-          </ParticleCard>
-        </div>
-
-        {/* Carousel - Scrollable Cards Below */}
-        <div className="carousel-section -mx-4">
-          <div className="flex items-center justify-between mb-4 px-6">
-            <h3 className="text-white text-xl font-medium">All Projects</h3>
-            <div className="flex gap-2">
-              <button
-                onClick={() => scrollCarousel('left')}
-                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-200 text-white"
-                aria-label="Scroll left"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={() => scrollCarousel('right')}
-                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-200 text-white"
-                aria-label="Scroll right"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+        {/* Main Layout - Featured Card Left, Carousel Right */}
+        <div className="flex gap-6 items-stretch h-[450px]">
+          {/* Featured Card - Left Side */}
+          <div className="featured-card flex-1 min-w-0">
+            <ParticleCard
+              className={`card card-with-bg flex flex-col justify-between relative w-full h-full p-6 rounded-[24px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.25)] ${
+                enableBorderGlow ? "card--border-glow" : ""
+              }`}
+              style={{
+                backgroundColor: featuredCard.color || "var(--background-dark)",
+                backgroundImage: featuredCard.image ? `url(${featuredCard.image})` : 'none',
+                borderColor: "var(--border-color)",
+                color: "var(--white)",
+                "--glow-x": "50%",
+                "--glow-y": "50%",
+                "--glow-intensity": "0",
+                "--glow-radius": "200px",
+              }}
+              disableAnimations={shouldDisableAnimations}
+              particleCount={particleCount}
+              glowColor={glowColor}
+              enableTilt={enableTilt}
+              clickEffect={clickEffect}
+              enableMagnetism={enableMagnetism}
+            >
+              <div className="card__header flex justify-between items-start gap-3 relative text-white">
+                <span className="card__label text-3xl font-medium">{featuredCard.label}</span>
+                <Link
+                  to={featuredCard.path || "/"}
+                  className="p-2 bg-white/10 hover:bg-white/20 rounded-lg border border-white/20 transition-all duration-200"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M7 17L17 7"></path>
+                    <path d="M7 7h10v10"></path>
+                  </svg>
+                </Link>
+              </div>
+              <div className="card__content flex flex-col relative text-white mt-auto">
+                <h2 className="card__title font-semibold text-5xl m-0 mb-2">
+                  {featuredCard.title}
+                </h2>
+                <p className="card__description text-xl leading-6 opacity-90 mb-4">
+                  {featuredCard.description}
+                </p>
+                {featuredCard.tech && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {featuredCard.tech.map((tech, idx) => (
+                      <span key={idx} className="tech-badge">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </ParticleCard>
           </div>
-          <div ref={carouselRef} className="carousel-container pb-4" onMouseDown={handleMouseDown}>
-            <div className="carousel-track flex gap-4" style={{ minWidth: 'max-content' }}>
+
+          {/* Carousel - Right Side - Vertical Stack */}
+          <div className="carousel-section flex-1 flex flex-col min-w-0">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-white text-xl font-medium">All Projects</h3>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => scrollCarousel('up')}
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-200 text-white"
+                  aria-label="Scroll up"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7-7m0 0l-7 7m7-7v12" />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => scrollCarousel('down')}
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-200 text-white"
+                  aria-label="Scroll down"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7 7m0 0l7-7m-7 7V3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div ref={carouselRef} className="carousel-container flex-1 overflow-y-auto overflow-x-hidden pb-4" onMouseDown={handleMouseDown}>
+            <div className="carousel-track flex flex-col gap-4" style={{ minHeight: 'max-content' }}>
               {carouselCards.map((card, index) => {
                 const originalIndex = cardData.findIndex(c => c === card);
-            const baseClassName = `card flex flex-col justify-between relative w-[280px] h-[220px] flex-shrink-0 p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] cursor-pointer ${
+            const baseClassName = `card flex flex-col justify-between relative w-full h-[160px] flex-shrink-0 p-4 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] cursor-pointer ${
               enableBorderGlow ? "card--border-glow" : ""
             }`;
 
@@ -999,7 +1054,8 @@ const MagicBento = ({
             );
           })}
             </div>
-          </div>
+            </div>
+            </div>
         </div>
       </BentoCardGrid>
     </>

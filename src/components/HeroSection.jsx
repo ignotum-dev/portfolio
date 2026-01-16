@@ -45,7 +45,7 @@ function HeroSection({ scrollToContact }) {
           </h1>
 
           <GradientText animationSpeed={1} direction="diagonal">
-            <h3 className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8">
+            <h3 className="text-xl md:text-3xl lg:text-4xl font-medium mb-6 md:mb-8">
               Junior Full-Stack Web Developer
             </h3>
           </GradientText>
